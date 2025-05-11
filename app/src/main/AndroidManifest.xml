@@ -16,6 +16,9 @@
             android:name=".login"
             android:exported="false" />
         <activity
+            android:name=".PilihNegara"
+            android:exported="false" />
+        <activity
             android:name=".Home"
             android:exported="false" />
         <activity
