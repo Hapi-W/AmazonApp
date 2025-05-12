@@ -11,15 +11,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_already_costumer_login);
+        setContentView(R.layout.activity_main);
 
-        new Handler().postDelayed(new Runnable() {
+       new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 Intent openHome = new Intent(MainActivity.this,PilihNegara.class);
                 startActivity(openHome);
                 finish();
             }
-        },3000);
+        },4000);
     }
 }

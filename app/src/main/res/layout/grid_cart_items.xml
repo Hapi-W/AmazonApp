@@ -30,7 +30,7 @@
                 android:id="@+id/cartImg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/buzzLight" />
+                app:srcCompat="@drawable/buzz_light" />
 
             <CheckBox
                 android:id="@+id/checkBox2"
@@ -120,17 +120,6 @@
             app:layout_constraintTop_toTopOf="@+id/imageView12"
             app:srcCompat="@drawable/icon_sampah" />
 
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="76dp"
-            android:background="@drawable/bg_yellow_cornered"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="@+id/imageView12"
-            app:layout_constraintStart_toEndOf="@+id/imageView12"
-            app:layout_constraintTop_toTopOf="@+id/imageView12"
-            app:layout_constraintVertical_bias="0.473" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
