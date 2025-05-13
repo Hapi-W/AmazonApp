@@ -75,7 +75,7 @@ public class gridCartItemAdapter extends BaseAdapter {
             holder.quantityText = convertView.findViewById(R.id.textView22);
             holder.increaseButton = convertView.findViewById(R.id.imageView13);
             holder.decreaseButton = convertView.findViewById(R.id.imageView14);
-            holder.compareButton = convertView.findViewById(R.id.textView29);
+            holder.compareButton = convertView.findViewById(R.id.itemDisc);
             holder.deleteButton = convertView.findViewById(R.id.textView30);
             holder.saveButton = convertView.findViewById(R.id.textView31);
 
