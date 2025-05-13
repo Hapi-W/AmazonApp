@@ -36,21 +36,21 @@ public class Cart_Activity extends AppCompatActivity {
         };
 
         int[] productImages = {
-                R.drawable.buzz_light,
-                R.drawable.woody,
-                R.drawable.rc_car
+                R.drawable.item_1,
+                R.drawable.item_2,
+                R.drawable.item_3
         };
 
         boolean[] stockStatus = {
-                true,  // Buzz in stock
-                true,  // Woody in stock
-                false  // RC Car out of stock
+                true,
+                true,
+                false
         };
 
         int[] itemQuantities = {
-                1, // Quantity of Buzz
-                2, // Quantity of Woody
-                1  // Quantity of RC Car
+                1,
+                2,
+                1
         };
 
         // Initialize ListView

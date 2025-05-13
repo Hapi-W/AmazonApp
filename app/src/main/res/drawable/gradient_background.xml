@@ -9,7 +9,7 @@
         <shape>
             <solid android:color="#FFFFFF"/> <!-- Menambahkan warna isian putih -->
             <corners android:radius="14dp"/>
-            <stroke android:color="#000000" android:alpa="0.5"/>
+            <stroke android:color="#000000" />
         </shape>
     </item>
 </layer-list>
