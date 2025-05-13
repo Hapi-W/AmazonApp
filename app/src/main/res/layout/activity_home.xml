@@ -8,6 +8,7 @@
 
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="810dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView2"
@@ -63,6 +64,30 @@
                     app:layout_constraintStart_toEndOf="@+id/textView26"
                     app:layout_constraintTop_toTopOf="@+id/textView26"
                     app:srcCompat="@drawable/icon_arrow_outlined" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="250dp"
+                        android:layout_height="match_parent">
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </LinearLayout>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
     </ScrollView>
@@ -86,31 +111,37 @@
         android:id="@+id/imageView15"
         android:layout_width="34dp"
         android:layout_height="28dp"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText4"
-        app:layout_constraintStart_toStartOf="@+id/editTextText4"
-        app:layout_constraintTop_toTopOf="@+id/editTextText4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.087"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042"
         app:srcCompat="@drawable/icon_search" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="29dp"
-        android:layout_height="28dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView17"
-        app:layout_constraintEnd_toStartOf="@+id/imageView17"
-        app:layout_constraintTop_toTopOf="@+id/imageView17"
-        app:srcCompat="@drawable/icon_camera" />
 
     <ImageView
         android:id="@+id/imageView17"
         android:layout_width="29dp"
         android:layout_height="26dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toBottomOf="@+id/editTextText4"
-        app:layout_constraintEnd_toEndOf="@+id/editTextText4"
-        app:layout_constraintTop_toTopOf="@+id/editTextText4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.91"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
         app:srcCompat="@drawable/icon_mic_line" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="29dp"
+        android:layout_height="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.806"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.045"
+        app:srcCompat="@drawable/icon_camera" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView2"
