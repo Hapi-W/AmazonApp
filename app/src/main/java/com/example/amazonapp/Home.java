@@ -26,8 +26,8 @@ public class Home extends AppCompatActivity {
         int[] cimg ={
                 R.drawable.item_1,
                 R.drawable.item_2,
-                R.drawable.boneka,
-                R.drawable.robot,
+                R.drawable.item_4,
+                R.drawable.item_5,
 
         };
         String[] cdisc = {
