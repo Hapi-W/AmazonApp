@@ -24,8 +24,8 @@ public class Home extends AppCompatActivity {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
         }
         int[] cimg ={
-                R.drawable.boneka,
-                R.drawable.rc_car,
+                R.drawable.item_1,
+                R.drawable.item_2,
                 R.drawable.boneka,
                 R.drawable.robot,
 

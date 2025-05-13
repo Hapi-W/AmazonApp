@@ -34,64 +34,64 @@ public class gridCartItemAdapter extends BaseAdapter {
         this.itemQuantities = itemQuantities;
     }
 
-    // Returns the number of items
+
     @Override
     public int getCount() {
         return productTitles.length;
     }
 
-    // Gets item at specific position
+
     @Override
     public Object getItem(int position) {
         return productTitles[position];
     }
 
-    // Gets item ID
+
     @Override
     public long getItemId(int position) {
         return position;
     }
 
-    // Creates and configures the view for each cart item
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // ViewHolder for performance optimization
+
         ViewHolder holder;
 
-        // If view isn't inflated yet, inflate layout
+
         if (convertView == null) {
             LayoutInflater inflater = LayoutInflater.from(context);
             convertView = inflater.inflate(R.layout.grid_cart_items, parent, false);
 
-            // Initialize holder
+
             holder = new ViewHolder();
             holder.cardView = convertView.findViewById(R.id.cardView);
             holder.productImage = convertView.findViewById(R.id.cartImg);
             holder.checkBox = convertView.findViewById(R.id.checkBox2);
             holder.productTitle = convertView.findViewById(R.id.cartTitle);
             holder.productPrice = convertView.findViewById(R.id.cartPrice);
-            holder.returnStatus = convertView.findViewById(R.id.textView28);
-            holder.stockStatus = convertView.findViewById(R.id.textView27);
-            holder.quantityText = convertView.findViewById(R.id.textView22);
-            holder.increaseButton = convertView.findViewById(R.id.imageView13);
-            holder.decreaseButton = convertView.findViewById(R.id.imageView14);
-            holder.compareButton = convertView.findViewById(R.id.itemDisc);
-            holder.deleteButton = convertView.findViewById(R.id.textView30);
-            holder.saveButton = convertView.findViewById(R.id.textView31);
+            holder.returnStatus = convertView.findViewById(R.id.returnStatus);
+            holder.stockStatus = convertView.findViewById(R.id.stockStatus);
+            holder.quantityText = convertView.findViewById(R.id.totalItem);
+            holder.increaseButton = convertView.findViewById(R.id.btn_tambah);
+            holder.decreaseButton = convertView.findViewById(R.id.btn_kurang);
+            holder.compareButton = convertView.findViewById(R.id.btn_compare);
+            holder.deleteButton = convertView.findViewById(R.id.btn_delete_cart);
+            holder.saveButton = convertView.findViewById(R.id.btn_save_later);
 
-            // Save holder to view
+
             convertView.setTag(holder);
         } else {
-            // Use existing holder
+
             holder = (ViewHolder) convertView.getTag();
         }
 
-        // Set data for each view
+
         holder.productImage.setImageResource(productImages[position]);
         holder.productTitle.setText(productTitles[position]);
         holder.productPrice.setText(productPrices[position]);
 
-        // Set stock status
+
         if (stockStatus[position]) {
             holder.stockStatus.setText("In stock");
             holder.stockStatus.setTextColor(context.getResources().getColor(R.color.hijau));
@@ -100,10 +100,10 @@ public class gridCartItemAdapter extends BaseAdapter {
             holder.stockStatus.setTextColor(context.getResources().getColor(android.R.color.holo_red_dark));
         }
 
-        // Set item quantity
+
         holder.quantityText.setText(String.valueOf(itemQuantities[position]));
 
-        // Set listener for increase button
+
         holder.increaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -117,7 +117,7 @@ public class gridCartItemAdapter extends BaseAdapter {
             }
         });
 
-        // Set listener for decrease button
+
         holder.decreaseButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,7 +131,7 @@ public class gridCartItemAdapter extends BaseAdapter {
             }
         });
 
-        // Set listener for compare button
+
         holder.compareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -140,28 +140,28 @@ public class gridCartItemAdapter extends BaseAdapter {
             }
         });
 
-        // Set listener for delete button
+
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Removing " + productTitles[position], Toast.LENGTH_SHORT).show();
-                // Add logic to remove item from cart here
+
             }
         });
 
-        // Set listener for save button
+
         holder.saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Saving " + productTitles[position] + " for later",
                         Toast.LENGTH_SHORT).show();
-                // Add logic to save item for later here
+
             }
         });
 
-        // Set checkbox
+
         holder.checkBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            // Add logic when checkbox is checked/unchecked
+
             if (isChecked) {
                 Toast.makeText(context, productTitles[position] + " selected", Toast.LENGTH_SHORT).show();
             } else {
@@ -172,7 +172,7 @@ public class gridCartItemAdapter extends BaseAdapter {
         return convertView;
     }
 
-    // ViewHolder class to improve ListView performance
+
     private static class ViewHolder {
         CardView cardView;
         ImageView productImage;

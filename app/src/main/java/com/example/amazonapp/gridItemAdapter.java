@@ -45,7 +45,7 @@ public class gridItemAdapter extends BaseAdapter{
             convertView = inflater.inflate(R.layout.grid_item_layout, null);
 
         ImageView itemImg = convertView.findViewById(R.id.itemImg);
-        TextView itemDisc = convertView.findViewById(R.id.itemDisc);
+        TextView itemDisc = convertView.findViewById(R.id.btn_compare);
         TextView timeEnd = convertView.findViewById(R.id.timeEnd);
 
         itemImg.setImageResource(image[position]);
