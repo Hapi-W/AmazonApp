@@ -13,9 +13,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class DetailItem extends AppCompatActivity {
+    TextView detailTittle, detailDisc,detailEnd;
+    ImageView detailImg;
 
     private BottomNavigationView bottomNavigationView; // ✅ Dideklarasikan di sini
 
@@ -30,6 +34,24 @@ public class DetailItem extends AppCompatActivity {
             window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
             window.setStatusBarColor(this.getResources().getColor(R.color.stBar));
         }
+        //identifier
+        detailImg = findViewById(R.id.detailImg);
+        detailTittle = findViewById(R.id.detailTittle);
+        detailDisc = findViewById(R.id.detailDisc);
+        detailEnd = findViewById(R.id.detailEnd);
+
+
+
+        String name = getIntent().getStringExtra("name");
+        String disc = getIntent().getStringExtra("disc");
+        int image = getIntent().getIntExtra("image",0);
+        String time = getIntent().getStringExtra("time");
+
+        detailImg.setImageResource(image);
+        detailTittle.setText(name);
+        detailDisc.setText(disc);
+        detailEnd.setText(time);
+
         // Setup bottom navigation
         bottomNavigationView = findViewById(R.id.bottomNavigationView3);
         bottomNavigationView.setSelectedItemId(R.id.home); // Set Home as selected
