@@ -142,6 +142,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="24dp"
             android:backgroundTint="#FFD80F"
+            android:onClick="toHome"
             android:text="Continue"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@+id/textInputLayout"

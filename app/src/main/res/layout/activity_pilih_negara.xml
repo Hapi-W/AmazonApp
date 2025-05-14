@@ -168,6 +168,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/bg_yellow_cornered"
+        android:onClick="toLogin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout7"
         app:layout_constraintHorizontal_bias="0.0"

@@ -16,10 +16,10 @@ public class gridItemAdapter extends BaseAdapter{
     int[] image;
     LayoutInflater inflater;
 
-    public gridItemAdapter(Context context, String[] time, String[] disc, int[] image) {
+    public gridItemAdapter(Context context, String[] disc, String[] time,  int[] image) {
         this.context = context;
-        this.time = time;
         this.disc = disc;
+        this.time = time;
         this.image = image;
     }
     @Override

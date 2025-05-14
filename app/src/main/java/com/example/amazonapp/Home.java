@@ -31,6 +31,12 @@ public class Home extends AppCompatActivity {
                 R.drawable.item_5,
 
         };
+        String[] cname = {
+                "Buzz",
+                "Woody",
+                "Boneka",
+                "Robot",
+        };
         String[] cdisc = {
                 "30% off",
                 "25% off",
@@ -56,6 +62,7 @@ public class Home extends AppCompatActivity {
                 Intent openItem = new Intent(Home.this, DetailItem.class);
 
                 openItem.putExtra("image", cimg[position]);
+                openItem.putExtra("name", cname[position]);
                 openItem.putExtra("disc", cdisc[position]);
                 openItem.putExtra("time", ctime[position]);
 
